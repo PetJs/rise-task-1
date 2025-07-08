@@ -1,8 +1,6 @@
 import './App.css'
 import HeadShot from "./assets/images/bolu.jpg";
 import ContactMe from "./assets/images/contact.jpg"
-import Archi from "./assets/images/archi.jpg"
-import Resort from "./assets/images/resort.jpg"
 import {
   Instagram,
   Facebook,
@@ -46,7 +44,10 @@ function App() {
         </div>
       </section>
 
+      {/* WORK */}
+      <section>
 
+      </section>
 
 
 
