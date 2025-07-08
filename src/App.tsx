@@ -1,12 +1,14 @@
 import './App.css'
-import HeadShot from "./assets/images/bolu.jpg"
+import HeadShot from "./assets/images/bolu.jpg";
+import ContactMe from "./assets/images/contact.jpg"
+import Archi from "./assets/images/archi.jpg"
+import Resort from "./assets/images/resort.jpg"
 import {
   Instagram,
   Facebook,
   Twitter,
   Linkedin,
   Youtube,
-  TwitterIcon
 } from 'lucide-react';
 
 function App() {
@@ -43,8 +45,27 @@ function App() {
             <h1 className='m-0 p-0 text-[220px] text-center leading-[0.8] font-bold '>SEIDU BOLU</h1>
         </div>
       </section>
-      {/* FOOTER */}
+
+
+
+
+
+
+      {/* contact section */}
       <section className='h-screen relative'>
+        <img src={ContactMe} alt="contact me" className='rekative w-full object-cover h-screen'/>
+
+        <h2 className='text-left z-20 absolute right-0 top-0 p-6 mr-12 text-4xl text-white font-semibold w-[35vw]'>
+          Global presence, global recognition -- Contact me to take your next step.
+        </h2>
+
+        <h1 className=' absolute mb-8 z-20 bottom-0  m-0 p-0 text-[150px] text-center leading-[1] font-bold border-b-[6px] w-fit border-current text-white ml-4 '>Contact Me </h1>
+        
+      </section>
+
+
+      {/* FOOTER */}
+      <section className='h-screen relative bg-white'>
         <div className='absolute z-10 p-6 font-bold text-2xl'>
           <ul className='flex flex-col group gap-2'>
             {['Home', 'About', 'Work', 'Contact'].map((item) => (
