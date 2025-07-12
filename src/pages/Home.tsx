@@ -13,6 +13,7 @@ import Archi from "../assets/images/archi.jpg"
 import Resort from "../assets/images/resort.jpg"
 import Flower from "../assets/images/flower.webp"
 import Button from "@/components/Button";
+import FlipText from "@/components/AnimatedText";
 
 
 
@@ -68,16 +69,23 @@ function Home() {
                     </p>
                 </div>
             </div>
-            <Button>More about me</Button>
+            <Button><FlipText
+              text="More About Me"
+              className="text-sm  text-white"
+              delay={0.03}
+              duration={0.3}
+            /></Button>
         </div>
       </section>
 
       {/* WORK */}
-      <section>
-
-        <WorkDisplay img={Archi} text="APEX ARCHITECTS" />
-        <WorkDisplay img={Resort} text="Mubau Resort" />
-
+       <section className="relative h-[200vh]">
+        <div className="sticky top-0 z-20 h-screen">
+          <WorkDisplay img={Archi} text="APEX ARCHITECTS" />
+        </div>
+        <div className="sticky top-0 z-30 h-screen">
+          <WorkDisplay img={Resort} text="Mubau Resort" />
+        </div>
       </section>
 
 
