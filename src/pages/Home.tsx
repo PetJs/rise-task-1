@@ -8,6 +8,11 @@ import {
   Youtube,
 } from 'lucide-react'; 
 import Icon from '@/components/icon';
+import WorkDisplay from "@/components/workDisplay";
+import Archi from "../assets/images/archi.jpg"
+import Resort from "../assets/images/resort.jpg"
+import Flower from "../assets/images/flower.webp"
+import Button from "@/components/Button";
 
 
 
@@ -33,8 +38,45 @@ function Home() {
         </div>
       </section>
 
+      <section className="h-[200vh] p-6">
+        <div className=" mx-auto text-gray-800 px-6">
+            <div className="overflow-hidden">
+                <img
+                src={Flower}
+                alt="About"
+                className="w-72 ml-24 mt-32 rounded-md"
+                />
+                <p className=" text-6xl font-bold ">
+                I help brands craft meaningful
+                stories and compelling visuals that deeply
+                resonate with their audience, foster strong
+                connections, build lasting loyalty, and drive
+                sustainable long-term growth.
+                </p>
+            </div>
+        </div>
+        <div className="ml-auto w-1/2 border-t-1 p-4 mt-12 mr-24">
+            <div className="flex gap-2 w-fit mb-8">
+                <div>
+                    <p className="font-semibold text-sm ">From A-Z</p>
+                    <p className="text-gray-300 text-sm">I manage your entire branding process, from concept to execution. Whether it's logo design,messaging, or strategy, I ensure everything aligns for a cohesive and impactful brand.
+                    </p>
+                </div>
+                <div>
+                    <p className="font-semibold text-sm ">Solo or Team</p>
+                    <p className="text-gray-300 text-sm">I manage your entire branding process, from concept to execution. Whether it's logo design,messaging, or strategy, I ensure everything aligns for a cohesive and impactful brand.
+                    </p>
+                </div>
+            </div>
+            <Button>More about me</Button>
+        </div>
+      </section>
+
       {/* WORK */}
       <section>
+
+        <WorkDisplay img={Archi} text="APEX ARCHITECTS" />
+        <WorkDisplay img={Resort} text="Mubau Resort" />
 
       </section>
 
