@@ -3,6 +3,7 @@ import Navbar from "@/components/nav";
 import { Instagram, Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
 import Icon from "@/components/icon";
 import ContactMe from "../assets/images/contact.jpg"
+import { motion } from "framer-motion";
 
 interface LayoutProps {
   children: ReactNode;
@@ -17,7 +18,12 @@ export default function Layout({ children }: LayoutProps) {
       {/* Vertical Left Nav */}
       <div className='w-1/2 absolute right-0 z-40'>
           <div className=' top-0 p-6 font-bold text-2xl'>
-            <ul className='flex flex-col group'>
+            <motion.ul 
+            className='flex flex-col group'
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            >
               {['Home', 'About', 'Work', 'Contact'].map((item) => (
                 <li className="relative group/item">
                   <span className="text-black group-hover:text-gray-400 group-hover/item:text-black transition-colors duration-100">
@@ -26,7 +32,7 @@ export default function Layout({ children }: LayoutProps) {
                   <span className="absolute left-0 bottom-0 w-22 h-[3px] bg-current scale-x-0 group-hover/item:scale-x-100 origin-left transition-transform duration-2000"></span>
                 </li>
               ))}
-            </ul>
+            </motion.ul>
           </div>
         </div>
 
@@ -38,11 +44,21 @@ export default function Layout({ children }: LayoutProps) {
         <section className='h-screen relative top-0 z-30'>
           <img src={ContactMe} alt="contact me" className='rekative w-full object-cover h-screen'/>
 
-          <h2 className='text-left z-20 absolute right-0 top-0 p-6 mr-12 text-4xl text-white font-semibold w-[35vw]'>
+          <motion.h2 
+          className='text-left z-20 absolute right-0 top-0 p-6 mr-12 text-4xl text-white font-semibold w-[35vw]'
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          >
             Global presence, global recognition -- Contact me to take your next step.
-          </h2>
+          </motion.h2>
 
-          <h1 className=' absolute mb-8 z-20 bottom-0  m-0 p-0 text-[150px] text-center leading-[1] font-bold border-b-[6px] w-fit border-current text-white ml-4 '>Contact Me </h1>
+          <motion.h1 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className=' absolute mb-8 z-20 bottom-0  m-0 p-0 text-[150px] text-center leading-[1] font-bold border-b-[6px] w-fit border-current text-white ml-4 '
+          >Contact Me </motion.h1>
           
         </section>
 
